@@ -1,4 +1,6 @@
+import { waterStats } from './statistics.js';
 const sideMenu = document.querySelector("aside");
+const profileBtn = document.querySelector("#profile-btn");
 const themeToggler = document.querySelector(".theme-toggler");
 const next = document.getElementById('next');
 const prev = document.getElementById('prev');
@@ -17,5 +19,6 @@ themeToggler.onclick = function() {
     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active')
 }
+
 
 
