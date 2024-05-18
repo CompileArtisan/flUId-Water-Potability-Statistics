@@ -87,3 +87,18 @@ prev.addEventListener('click', () => {
 });
 
 updateStatistics();
+
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll() {
+  const randomlol = document.querySelector('.randomlol');
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollPosition > 0) {
+    randomlol.style.left = '200px';
+    randomlol.style.right = '200px';
+  } else {
+    randomlol.style.left = '400px';
+    randomlol.style.right = '400px';
+  }
+}
