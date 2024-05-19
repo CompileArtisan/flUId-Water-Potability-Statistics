@@ -391,9 +391,22 @@ main .timetable.active .closeBtn{
     box-shadow: var(--box-shadow);
 }
 .right .leaves .homePage:hover{
-    transform: scale(1.2); 
+    transform: scale(1.1); 
+}
+.right .leaves .homePage:hover .hover-content{
+    display: block;
+}
+.right .leaves .homePage:hover .info{
+    display: none;
 }
 
+.right .leaves .homePage .hover-content{
+    display: none;
+}
+
+a:hover{
+    color: var(--color-primary);
+}
 
 
 
