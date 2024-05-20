@@ -345,6 +345,8 @@ main .timetable.active .closeBtn{
     right: 400px;
     background: var(--color-white);
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-bottom: .7rem;
@@ -355,7 +357,17 @@ main .timetable.active .closeBtn{
     width: fit-content;
 }
 .randomlol:hover{box-shadow: none;}
-
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.col {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 
 
@@ -408,6 +420,30 @@ a:hover{
     color: var(--color-primary);
 }
 
+form {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+#result {
+    font-weight: bold;
+    margin-top: 20px;
+}
 
 
 @media screen and (max-width: 1200px) {
