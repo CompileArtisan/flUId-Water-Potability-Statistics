@@ -82,7 +82,7 @@
     </header>
     <br><br><br><br><br>
     <div id="dataSetContainer">
-        <form>
+        <form onsubmit="formSubmit(event)" id="potabilityForm">
             <h2>Check if your water is potable or not</h2>
             <p class="text-muted">The accurary of the model strictly depends on the content you enter.</p>
             <label for="ph">pH:</label>
@@ -118,7 +118,7 @@
     </div>
     
       <div id="result"></div>
-
+    <script src="checker.js"></script>
     <script src="timeTable.js"></script>
     <script src="app.js"></script>
 </body>
