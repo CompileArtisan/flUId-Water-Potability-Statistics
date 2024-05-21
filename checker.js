@@ -25,25 +25,38 @@ const notPotableData = {
 };
 
 // Function to check water potability
-function checkPotability(data) {
-    fetch('https://uid-backend-flask.vercel.app/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'POST',
-            'Access-Control-Allow-Headers': 'Content-Type',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-    	console.log(data);
-        console.log(data.potable ? 'Water is Potable' : 'Water is Not Potable');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+async function checkPotability(data) {
+    try {
+        const response = await fetch("https://uid-backend-flask.vercel.app/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+
+        const responseData = await response.json();
+        if (responseData.potable) {
+            document.getElementById("result").innerText = "Water is Potable";
+        } else {
+            document.getElementById("result").innerText = "Water is Not Potable";
+        }
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
 }
 
-checkPotability(potableData);
+document.getElementById("potabilityForm").addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+
+    checkPotability(data);
+}   );
