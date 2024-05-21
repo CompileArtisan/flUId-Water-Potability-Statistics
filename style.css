@@ -500,6 +500,36 @@ tr:hover td {
     text-align: center;
 }
 
+.gallery {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust this value to change the maximum width */
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    transition: all 300ms ease;
+    box-shadow: var(--box-shadow);
+}
+
+.marquee-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+marquee {
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width: 1200px) {
     html{font-size: 12px;}
     .container{
