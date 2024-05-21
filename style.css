@@ -420,6 +420,8 @@ main .timetable.active .closeBtn{
 }
 .right .leaves .homePage:hover{
     transform: scale(1.1); 
+    position: relative;
+    z-index: 1;
 }
 .right .leaves .homePage:hover .hover-content{
     display: block;
@@ -434,6 +436,33 @@ main .timetable.active .closeBtn{
 
 a:hover{
     color: var(--color-primary);
+}
+
+.stuffAtSide1{
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    transition: all 200ms ease;
+    box-shadow: var(--box-shadow);
+}
+#topsy{
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-2);
+    transition: all 200ms ease;
+    box-shadow: var(--box-shadow);
+}
+#extra{
+    display:none;
 }
 
 form {
@@ -576,15 +605,17 @@ marquee {
     aside.active{
         transform: translateX(0);
     }
-    main{padding: 0 2rem;}
-    main .timetable{
+    main{
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main .stuffAtSide1{
         position: relative;
         margin: 3rem 0 0 0;
         width: 100%;
-    }
-    main .timetable table{
-        width: 100%;
-        margin: 0;
     }
     .right{
         width: 100%;

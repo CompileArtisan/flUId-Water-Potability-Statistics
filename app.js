@@ -1,23 +1,21 @@
-import { waterStats } from './statistics.js';
-const sideMenu = document.querySelector("aside");
-const profileBtn = document.querySelector("#profile-btn");
-const themeToggler = document.querySelector(".theme-toggler");
-const next = document.getElementById('next');
-const prev = document.getElementById('prev');
+document.getElementById('topsy').addEventListener('mouseover', function() {
+    this.style.transform = 'scale(0.9)';
+    document.getElementById('extra').style.display = 'flex';
+    document.getElementById('extra').style.transform = 'scale(1.1) translateX(-300px) translateY(-300px)';
+    document.getElementById('extra').style.position = 'relative';
+    document.getElementById('extra').style.zIndex = '1';
+});
 
-profileBtn.onclick = function() {
-    sideMenu.classList.toggle('active');
-}
-window.onscroll = () => {
-    sideMenu.classList.remove('active');
-    if(window.scrollY > 0){document.querySelector('header').classList.add('active');}
-    else{document.querySelector('header').classList.remove('active');}
-}
+document.getElementById('topsy').addEventListener('mouseout', function() {
+    this.style.transform = '';
+    document.getElementById('extra').style.display = 'none';
+    document.getElementById('extra').style.transform = '';
+    document.getElementById('extra').style.position = '';
+    document.getElementById('extra').style.zIndex = '';
+}); 
 
-themeToggler.onclick = function() {
-    document.body.classList.toggle('dark-theme');
-    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active')
-    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active')
-}
-
-
+// document.getElementById('topsy').addEventListener('mouseover', function() {
+    
+//     this.style.position = 'relative';
+//     this.style.zIndex = '1';
+// });

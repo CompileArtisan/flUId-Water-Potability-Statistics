@@ -63,3 +63,4 @@ document.getElementById("potabilityForm").addEventListener("submit", function (e
 
     checkPotability(data);
 }   );
+
