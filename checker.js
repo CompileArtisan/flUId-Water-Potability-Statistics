@@ -40,10 +40,13 @@ async function checkPotability(data) {
         }
 
         const responseData = await response.json();
+        let result = document.getElementById("result");
         if (responseData.potable) {
-            document.getElementById("result").innerText = "Water is Potable";
+            result.innerText = "Water is Potable ✅";
+            result.style.color = "green";
         } else {
-            document.getElementById("result").innerText = "Water is Not Potable";
+            result.innerText = "Water is Not Potable ❌";
+            result.style.color = "red";
         }
 
     } catch (error) {
