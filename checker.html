@@ -82,35 +82,35 @@
     </header>
     <br><br><br><br><br>
     <div id="dataSetContainer">
-        <form onsubmit="formSubmit(event)" id="potabilityForm">
+        <form id="potabilityForm">
             <h2>Check if your water is potable or not</h2>
             <p class="text-muted">The accurary of the model strictly depends on the content you enter.</p>
             <label for="ph">pH:</label>
-            <input type="number" id="ph" name="ph" required><br>
+            <input type="text" id="ph" name="ph" required><br>
       
             <label for="hardness">Hardness:</label>
-            <input type="number" id="hardness" name="Hardness" required><br>
+            <input type="text" id="hardness" name="Hardness" required><br>
       
             <label for="solids">Solids:</label>
-            <input type="number" id="solids" name="Solids" required><br>
+            <input type="text" id="solids" name="Solids" required><br>
       
             <label for="chloramines">Chloramines:</label>
-            <input type="number" id="chloramines" name="Chloramines" required><br>
+            <input type="text" id="chloramines" name="Chloramines" required><br>
       
             <label for="sulfate">Sulfate:</label>
-            <input type="number" id="sulfate" name="Sulfate" required><br>
+            <input type="text" id="sulfate" name="Sulfate" required><br>
       
             <label for="conductivity">Conductivity:</label>
-            <input type="number" id="conductivity" name="Conductivity" required><br>
+            <input type="text" id="conductivity" name="Conductivity" required><br>
       
             <label for="organic_carbon">Organic Carbon:</label>
-            <input type="number" id="organic_carbon" name="Organic_carbon" required><br>
+            <input type="text" id="organic_carbon" name="Organic_carbon" required><br>
       
             <label for="trihalomethanes">Trihalomethanes:</label>
-            <input type="number" id="trihalomethanes" name="Trihalomethanes" required><br>
+            <input type="text" id="trihalomethanes" name="Trihalomethanes" required><br>
       
             <label for="turbidity">Turbidity:</label>
-            <input type="number" id="turbidity" name="Turbidity" required><br>
+            <input type="text" id="turbidity" name="Turbidity" required><br>
             <div class="button">
                 <input type="submit" value="Predict" class="btn">
             </div>

@@ -30,31 +30,20 @@ function checkPotability(data) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
         },
         body: JSON.stringify(data),
     })
     .then(response => response.json())
     .then(data => {
-    	
-        return (data.potable ? 1 : 0);
+    	console.log(data);
+        console.log(data.potable ? 'Water is Potable' : 'Water is Not Potable');
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 }
 
-function formSubmit(event) {
-    event.preventDefault();
-    const form = document.getElementById("potabilityForm");
-    const formData = new FormData(form);
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
-    let result = checkPotability(data);
-    if (result === 1) {
-        document.getElementById("result").innerText = "The water is potable!";
-    } else {
-        document.getElementById("result").innerText = "The water is not potable!";
-    }
-}
+checkPotability(potableData);
