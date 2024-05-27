@@ -11,4 +11,6 @@ listed on the original owner's repository.
  - [madhubysani01](https://github.com/madhubysani01) 
 for the [contact page](https://fluid-water-potability-statistics.vercel.app/contact.html).
  - [varunadhityagb](https://github.com/varunadhityagb)
-for the [back-end of the water potability checker](https://github.com/varunadhityagb/uid-backend-flask).
+for the [back-end of the water potability checker](https://github.com/varunadhityagb/uid-backend-flask). <br /><br /><br />
+![image](https://github.com/CompileArtisan/flUId-Water-Potability-Statistics/assets/140785178/754041c0-55df-41ab-a37f-d916f086f8a9)
+
