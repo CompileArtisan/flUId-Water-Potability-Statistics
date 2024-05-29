@@ -9,7 +9,7 @@ flUId is a website designed using HTML, CSS and JavaScript, to learn and try out
  - [Student-Dashboard](https://github.com/ADi7YA26/Student-Dashboard)
 by ADi7YA26, forms the basis for flUId. Student-Dashboard was modified to show our own styling and functionality, keeping in mind the [MIT license](https://github.com/ADi7YA26/Student-Dashboard/blob/main/LICENSE)
 listed on the original owner's repository.  
- - [madhubysani01](https://github.com/madhubysani01) 
+ - [12rash](https://github.com/12rash) 
 for the [contact page](https://fluid-water-potability-statistics.vercel.app/contact.html).
  - [varunadhityagb](https://github.com/varunadhityagb)
 for the [back-end of the water potability checker](https://github.com/varunadhityagb/uid-backend-flask).
